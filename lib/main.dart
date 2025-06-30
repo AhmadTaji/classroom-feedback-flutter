@@ -1,3 +1,4 @@
+//main page
 
 import 'package:flutter/material.dart';
 import 'screens/feedback_form.dart';
@@ -33,6 +34,7 @@ class FeedbackApp extends StatelessWidget {
       ),
       initialRoute: '/',
      routes: {
+      // This is the initial route when the app starts
   '/': (context) => const FeedbackForm(), // or LoginScreen if you want it first
   '/login': (context) => const LoginScreen(),
   '/dashboard': (context) => const DashboardPage(),
