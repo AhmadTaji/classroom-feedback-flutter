@@ -92,47 +92,7 @@ class _DashboardPageState extends State<DashboardPage> {
     fetchFeedbacks();
   }
 
-  // Future<void> fetchFeedbacks() async {
-  //   setState(() {
-  //     isLoading = true;
-  //     errorMsg = null;
-  //   });
-  //   final url = Uri.parse('http://10.10.10.14:3000/api/get-feedback');
-  //   try {
-  //     final res = await http.get(url).timeout(const Duration(seconds: 10));
-  //     if (res.statusCode == 200) {
-  //       final data = jsonDecode(res.body);
-  //       setState(() {
-  //         fullFeedbackList = List.from(data);
-  //         filteredList = List.from(data);
-  //         if (!teachers.contains(selectedTeacher)) selectedTeacher = 'All';
-  //         isLoading = false;
-  //         currentPage = 0;
-  //       });
-  //     } else {
-  //       setState(() {
-  //         isLoading = false;
-  //         errorMsg = 'Failed to load data: ${res.statusCode}';
-  //       });
-  //     }
-  //   } on http.ClientException catch (e) {
-  //     setState(() {
-  //       isLoading = false;
-  //       errorMsg = 'Network error: ${e.message}';
-  //     });
-  //   } on FormatException {
-  //     setState(() {
-  //       isLoading = false;
-  //       errorMsg = 'Invalid response format from server.';
-  //     });
-  //   } on Exception catch (e) {
-  //     setState(() {
-  //       isLoading = false;
-  //       errorMsg = 'Error: ${e.toString()}';
-  //     });
-  //   }
-  // }
-//added
+
 Future<void> fetchFeedbacks() async {
   setState(() {
     isLoading = true;
